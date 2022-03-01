@@ -1,0 +1,63 @@
+{
+  "name": "baiyi_official-website",
+  "version": "0.0.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "dev": "vite --host",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview --host",
+    "lint:script": "eslint src --fix --ext .ts,.tsx,.vue",
+    "lint:style": "stylelint src/**/*.vue src/**/*.scss --fix",
+    "lint": "npm run lint:script && npm run lint:style"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "@vitejs/plugin-vue-jsx": "^1.3.0",
+    "animate.css": "^4.1.1",
+    "ant-design-vue": "^3.0.0-alpha.13",
+    "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "lodash": "^4.17.21",
+    "qs": "^6.10.1",
+    "swiper": "^7.0.0",
+    "vue": "^3.2.23",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/node": "^16.11.11",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vitejs/plugin-legacy": "^1.6.3",
+    "@vitejs/plugin-vue": "^1.10.1",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-fd": "git+https://git.91fd.com/public-file/node_modules/eslint-plugin-fd.git",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.1.1",
+    "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "lint-staged": "^12.1.2",
+    "postcss-html": "^1.3.0",
+    "postcss-px2vp": "^1.1.1",
+    "prettier": "^2.5.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-vue": "^1.1.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.0.0",
+    "typescript": "^4.5.2",
+    "unplugin-auto-import": "^0.5.1",
+    "unplugin-vue-components": "^0.17.2",
+    "vite": "^2.6.14",
+    "vite-plugin-style-import": "^1.4.0",
+    "vue-global-api": "^0.4.1",
+    "vue-tsc": "^0.3.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,vue}": "npm run lint"
+  }
+}
