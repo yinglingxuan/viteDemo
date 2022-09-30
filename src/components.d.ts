@@ -5,10 +5,8 @@
 declare module 'vue' {
   export interface GlobalComponents {
     AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
-    ADatePicker: typeof import('ant-design-vue/es')['DatePicker']
-    ATable: typeof import('ant-design-vue/es')['Table']
     TagList: typeof import('./components/tagList/index.vue')['default']
   }
 }
 
-export {}
+export { }
